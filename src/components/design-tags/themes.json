@@ -1,0 +1,24 @@
+{
+    "data":{
+        "theme1":{
+            "id":"t1",
+            "name":"theme1",
+            "colors":{
+                "background":"#29132e",
+                "color":"#de004e",
+                "navbar":"#860029",
+                "hover":"#f887ff"
+            }
+        },
+        "theme2":{
+            "id":"t2",
+            "name":"theme2",
+            "colors":{
+                "background":"#393f5f",
+                "color":"#ffe69d",
+                "navbar":"#6a7e6a",
+                "hover":"#ff9760"
+            }
+        }
+    }
+}

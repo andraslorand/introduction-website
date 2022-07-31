@@ -1,13 +1,287 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+:root{
+  font-size: 16px;
+  color: #de004e;
+  background-color: #29132e;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.body{
+  
+  
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.main{
+  margin-left: 5rem;
+  padding: 1rem;
+
+}
+::-webkit-scrollbar{
+  width: 0.25rem;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #555;
+}
+::-webkit-scrollbar-track{
+  background-color: black;
+}
+
+.navbar {
+  height: 100vh;
+  width: 5rem;
+  position: fixed;
+  background-color: #860029;
+  transition: width 600ms ease;
+  
+}
+.navbar:hover{
+  width: 16rem;
+}
+
+.navbar:hover .nav-text{
+display: unset;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+
+.nav-item {
+  width: 100%;
+  transition: 1s;
+}
+.nav-item:hover{
+  background-color: #f887ff;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 1s;
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+}
+.link-text {
+  display: none;
+  margin-left: 1rem;
+  color: #29132e;
+  
+}
+.navbar:hover .link-text {
+  display: inline;
+}
+
+img{
+  width: 50px;
+
+}
+.column{
+  display: flex;
+  flex-direction: column;
+}
+button{
+  width: 200px;
+  height: 50px;
+}
+#bt1{
+  background-image: linear-gradient(to right,#de004e, #860029,#f887ff,#29132e);
+}
+
+
+/*
+  projects/ project tags:
+*/
+.bigimg{
+  width: 200px;
+  height: 200px;
+}
+.projecttag{
+  width: 250px;
+  border: 3px solid black;
+  text-align: center;
+}
+
+/*Contact-form*/
+.contact-form{
+  display: flex;
+  flex-direction: column;
+}
+.contact-form input{
+  max-width: 200px;
+  margin: 1px;
+  background-color: #860029;
+  color: white;
+}
+.contact-form textarea{
+  max-width: 200px;
+  height: 150px;
+  margin: 1px;
+  background-color: #860029;
+  color: white;
+}
+.btnc{
+  width: 200px;
+  background-color: #860029;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .main{
+    margin-left: 0;
+  }
+  .next{
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+    transition: none;
+  }
+  .navbar:hover{
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+  .navbar:hover .link-text {
+    display: none;
+  }
+ 
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  
+}
+
+
+/*To-Do*/
+
+.left{
+  max-width: 500px;
+}
+.right{
+  max-width: 500px;
+  background-color: aquamarine;
+}
+.head{
+
+  background-color: blueviolet;
+  justify-content: space-around;
+}
+.bt1{
+  width: 25px;
+  
+}
+.next{
+  display: flex;
+  flex-direction: row;
+}
+.hidden{
+  display: none;
+}
+.nh{
+  display: unset;
+}
+
+.items{
+  justify-content: space-between;
+}
+.taskmain{
+  background-color: rgb(8, 209, 209);
+  border-bottom: 15px solid black;
+}
+.addtask{
+  border: 5px solid rgba(40, 35, 35, 0.333);
+}
+.name{
+  font-size: 20px;
+}
+.task{
+  border-left: 3px solid #5555;
+  border-right: 3px solid #5555;
+  border-bottom: 3px solid #5555;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+/*Calculator*/
+.screen{
+  margin: 0 auto;
+  max-width: 500px;
+  height: 200px;
+  background-color: black;
+  color: wheat;
+  display: flex;
+  flex-direction: row;
+}
+.screen input{
+  width: 33%;
+  background-color: black;
+  color: white;
+}
+.keyboard{
+  margin: 0 auto;
+  max-width: 500px;
+  height: 400px;
+  background-color: wheat;
+}
+.spread{
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+button{
+  width: 50px;
+  height: 50px;
 }
